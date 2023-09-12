@@ -21,7 +21,7 @@
                     value="<%= oldInput.email %>">
             </div>
             <div class="form-control">
-                <label for="password">Password</label>
+                <label for="password">Parola</label>
                 <input 
                     class="<%= validationErrors.find(e => e.param === 'password') ? 'invalid' : '' %>"
                     type="password" 
@@ -30,7 +30,7 @@
                     value="<%= oldInput.password %>">
             </div>
             <div class="form-control">
-                <label for="confirmPassword">Confirm Password</label>
+                <label for="confirmPassword">Parola Onayla</label>
                 <input 
                     class="<%= validationErrors.find(e => e.param === 'confirmPassword') ? 'invalid' : '' %>"
                     type="password" 
@@ -39,7 +39,7 @@
                     value="<%= oldInput.confirmPassword %>">
             </div>
             <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-            <button class="btn" type="submit">Signup</button>
+            <button class="btn" type="submit">Kayıt Ol</button>
         </form>
     </main>
 <%- include('../includes/end.ejs') %>

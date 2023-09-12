@@ -4,24 +4,24 @@
     <nav class="main-header__nav">
         <ul class="main-header__item-list">
             <li class="main-header__item">
-                <a class="<%= path === '/' ? 'active' : '' %>" href="/">Shop</a>
+                <a class="<%= path === '/' ? 'active' : '' %>" href="/">Mağaza</a>
             </li>
             <li class="main-header__item">
-                <a class="<%= path === '/products' ? 'active' : '' %>" href="/products">Products</a>
+                <a class="<%= path === '/products' ? 'active' : '' %>" href="/products">Ürünler</a>
             </li>
             <% if (isAuthenticated) { %>
                 <li class="main-header__item">
-                    <a class="<%= path === '/cart' ? 'active' : '' %>" href="/cart">Cart</a>
+                    <a class="<%= path === '/cart' ? 'active' : '' %>" href="/cart">Sepet</a>
                 </li>
                 <li class="main-header__item">
-                    <a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders">Orders</a>
+                    <a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders">Sipariş</a>
                 </li>
                 <li class="main-header__item">
-                    <a class="<%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add Product
+                    <a class="<%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Ürün Ekle
                     </a>
                 </li>
                 <li class="main-header__item">
-                    <a class="<%= path === '/admin/products' ? 'active' : '' %>" href="/admin/products">Admin Products
+                    <a class="<%= path === '/admin/products' ? 'active' : '' %>" href="/admin/products">Admin Ürünler
                     </a>
                 </li>
             <% } %>
@@ -29,16 +29,16 @@
         <ul class="main-header__item-list">
             <% if (!isAuthenticated) { %>
                 <li class="main-header__item">
-                    <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Login</a>
+                    <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Giriş</a>
                 </li>
                 <li class="main-header__item">
-                    <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Signup</a>
+                    <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Kayıt Ol</a>
                 </li>
             <% } else { %>
                 <li class="main-header__item">
                     <form action="/logout" method="post">
                         <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                        <button type="submit">Logout</button>
+                        <button type="submit">Çıkış Yap</button>
                     </form>
                 </li>
             <% } %>
@@ -49,39 +49,39 @@
 <nav class="mobile-nav">
     <ul class="mobile-nav__item-list">
         <li class="mobile-nav__item">
-            <a class="<%= path === '/' ? 'active' : '' %>" href="/">Shop</a>
+            <a class="<%= path === '/' ? 'active' : '' %>" href="/">Mağaza</a>
         </li>
         <li class="mobile-nav__item">
-            <a class="<%= path === '/products' ? 'active' : '' %>" href="/products">Products</a>
+            <a class="<%= path === '/products' ? 'active' : '' %>" href="/products">Ürünler</a>
         </li>
         <% if (isAuthenticated) { %>
             <li class="mobile-nav__item">
-                <a class="<%= path === '/cart' ? 'active' : '' %>" href="/cart">Cart</a>
+                <a class="<%= path === '/cart' ? 'active' : '' %>" href="/cart">Sepet</a>
             </li>
             <li class="mobile-nav__item">
-                <a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders">Orders</a>
+                <a class="<%= path === '/orders' ? 'active' : '' %>" href="/orders">Siparişler</a>
             </li>
             <li class="mobile-nav__item">
-                <a class="<%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Add Product
+                <a class="<%= path === '/admin/add-product' ? 'active' : '' %>" href="/admin/add-product">Ürün Ekle
                 </a>
             </li>
             <li class="mobile-nav__item">
-                <a class="<%= path === '/admin/products' ? 'active' : '' %>" href="/admin/products">Admin Products
+                <a class="<%= path === '/admin/products' ? 'active' : '' %>" href="/admin/products">Admin Ürünler
                 </a>
             </li>
         <% } %>
         <% if (!isAuthenticated) { %>
             <li class="mobile-nav__item">
-                <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Login</a>
+                <a class="<%= path === '/login' ? 'active' : '' %>" href="/login">Giriş</a>
             </li>
             <li class="mobile-nav__item">
-                <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Signup</a>
+                <a class="<%= path === '/signup' ? 'active' : '' %>" href="/signup">Kayıt Ol</a>
             </li>
         <% } else { %>
             <li class="mobile-nav__item">
                 <form action="/logout" method="post">
                     <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                    <button type="submit">Logout</button>
+                    <button type="submit">Çıkış Yap</button>
                 </form>
             </li>
         <% } %>

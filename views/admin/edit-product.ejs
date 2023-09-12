@@ -12,7 +12,7 @@
         <% } %>
         <form class="product-form" action="/admin/<% if (editing) { %>edit-product<% } else { %>add-product<% } %>" method="POST" enctype="multipart/form-data">
             <div class="form-control">
-                <label for="title">Title</label>
+                <label for="title">Ürün Adı</label>
                 <input 
                     class="<%= validationErrors.find(e => e.param === 'title') ? 'invalid' : '' %>"
                     type="text" 
@@ -30,14 +30,14 @@
                     value="<% if (editing || hasError) { %><%= product.imageUrl %><% } %>">
             </div> -->
             <div class="form-control">
-                <label for="image">Image</label>
+                <label for="image">Ürün Görsel</label>
                 <input 
                     type="file" 
                     name="image" 
                     id="image" >
             </div>
             <div class="form-control">
-                <label for="price">Price</label>
+                <label for="price">Fiyatı</label>
                 <input 
                     class="<%= validationErrors.find(e => e.param === 'price') ? 'invalid' : '' %>"
                     type="number" 
@@ -47,7 +47,7 @@
                     value="<% if (editing || hasError) { %><%= product.price %><% } %>">
             </div>
             <div class="form-control">
-                <label for="description">Description</label>
+                <label for="description">Ürün Açıklaması</label>
                 <textarea 
                     class="<%= validationErrors.find(e => e.param === 'description') ? 'invalid' : '' %>"
                     name="description" 
